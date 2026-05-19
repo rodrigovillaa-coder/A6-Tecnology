@@ -712,7 +712,7 @@ function HomePage() {
           <div className="mt-12 text-center">
             <Link 
               to="/venda-impressoras" 
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-slate-900 px-10 py-4 text-lg font-bold text-white transition-all hover:bg-neutral-gray shadow-lg hover:shadow-slate-200"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-10 py-4 text-lg font-bold text-white transition-all hover:bg-neutral-gray shadow-lg hover:shadow-primary/20"
             >
               Todas Impressoras <ChevronRight size={20} />
             </Link>
