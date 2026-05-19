@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { motion } from "motion/react";
+import { motion, useScroll, useTransform } from "motion/react";
 import { 
   Printer, 
   PenTool, 
@@ -24,7 +24,7 @@ import {
   Check,
   ShoppingCart
 } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from "react-router-dom";
 import PrintersPage from "./pages/PrintersPage";
 import PrinterDetailPage from "./pages/PrinterDetailPage";
@@ -388,18 +388,30 @@ function SuprimentosPage() {
 }
 
 function HomePage() {
+  const heroRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ["start start", "end start"]
+  });
+  
+  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
+  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0.5]);
+
   return (
     <>
       {/* Hero Section */}
-      <section id="home" className="relative h-screen min-h-[700px] w-full overflow-hidden bg-white">
-        <div className="absolute inset-0 opacity-100">
+      <section id="home" ref={heroRef} className="relative h-screen min-h-[700px] w-full overflow-hidden bg-white">
+        <motion.div 
+          style={{ y: backgroundY, opacity }}
+          className="absolute inset-0 z-0"
+        >
           <img 
             src="https://lh3.googleusercontent.com/d/1yz9zqtOo8yQjOGFdA64ObDqtcbwnQZ4E" 
             alt="Banner Home A6 Tecnology" 
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover scale-110"
             referrerPolicy="no-referrer"
           />
-        </div>
+        </motion.div>
         
         <div className="container relative mx-auto flex h-full items-center px-6">
           <div className="flex w-full flex-col items-center justify-center gap-12">
