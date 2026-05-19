@@ -608,7 +608,7 @@ function HomePage() {
                 ))}
               </div>
               
-              <Link to="/suprimentos" className="mt-10 inline-block rounded-full bg-slate-100 px-8 py-4 font-bold text-slate-900 transition-all hover:bg-slate-200 text-center w-full md:w-auto">
+              <Link to="/suprimentos" className="mt-10 inline-block rounded-full bg-primary px-8 py-4 font-bold text-white transition-all hover:opacity-90 shadow-lg shadow-primary/20 text-center w-full md:w-auto">
                 Consultar Suprimentos
               </Link>
             </div>
