@@ -475,27 +475,27 @@ function HomePage() {
             <div className="mt-10 md:mt-12 flex flex-wrap justify-center gap-6 md:gap-16">
               {[
                 { 
-                  img: "https://a6technology.com.br/impressora-icon-1.png", 
+                  img: "https://i.postimg.cc/jSHcWp5K/impressora-icon-1.png", 
                   label: "Impressora monocromática" 
                 },
                 { 
-                  img: "https://a6technology.com.br/impressora-icon-2.png", 
+                  img: "https://i.postimg.cc/pLfC9wTb/impressora-icon-2.png", 
                   label: "Impressora colorida" 
                 },
                 { 
-                  img: "https://a6technology.com.br/impressora-icon-3.png", 
+                  img: "https://i.postimg.cc/BnTp8r6q/impressora-icon-3.png", 
                   label: "Multifuncional monocromática" 
                 },
                 { 
-                  img: "https://a6technology.com.br/impressora-icon-4.png", 
+                  img: "https://i.postimg.cc/6prc7kQF/impressora-icon-4.png", 
                   label: "Multifuncional colorida" 
                 },
                 { 
-                  img: "https://a6technology.com.br/impressora-icon-5.png", 
+                  img: "https://i.postimg.cc/8zR4F25s/impressora-icon-5.png", 
                   label: "Impressora A3" 
                 },
                 { 
-                  img: "https://a6technology.com.br/impressora-icon-6.png", 
+                  img: "https://i.postimg.cc/3xX1ysRN/impressora-icon-6.png", 
                   label: "Impressora A0 térmica" 
                 }
               ].map((cat, idx) => (
@@ -786,7 +786,7 @@ function HomePage() {
           <div className="mt-12 flex flex-col items-center gap-8 md:gap-12 rounded-3xl bg-slate-100 p-6 md:p-12 lg:flex-row shadow-sm border border-slate-200">
             <div className="w-full lg:w-1/2">
               <img 
-                src="/a6-tecnicos.jpg" 
+                src="https://i.postimg.cc/VsVj5GLX/a6-tecnicos.jpg" 
                 alt="A6 Technology" 
                 className="w-full rounded-2xl shadow-xl"
                 referrerPolicy="no-referrer"
