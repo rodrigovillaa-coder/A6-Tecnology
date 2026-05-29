@@ -332,18 +332,54 @@ function SuprimentosPage() {
           
           <div className="flex">
             <motion.div
-              className="flex gap-20 whitespace-nowrap px-4 opacity-40 grayscale items-center"
+              className="flex gap-20 whitespace-nowrap px-4 items-center"
               animate={{ x: ["0%", "-50%"] }}
               transition={{ ease: "linear", duration: 25, repeat: Infinity }}
             >
               {[...Array(4)].map((_, i) => (
                 <div key={i} className="flex items-center gap-20">
-                  <span className="text-3xl font-black tracking-tighter">PANTUM</span>
-                  <span className="text-3xl font-bold font-serif italic">HP</span>
-                  <span className="text-3xl font-bold uppercase tracking-wider">Brother</span>
-                  <span className="text-3xl font-semibold tracking-tight">Lexmark</span>
-                  <span className="text-3xl font-bold">KYOCERA</span>
-                  <span className="text-3xl font-black tracking-widest text-slate-800">SAMSUNG</span>
+                  <img 
+                    src="https://i.postimg.cc/Y9FgLg2t/Brother-logo.png" 
+                    alt="Brother" 
+                    className="h-12 w-auto object-contain shrink-0" 
+                    referrerPolicy="no-referrer" 
+                  />
+                  <img 
+                    src="https://i.postimg.cc/cH3YtY1Z/HP-logo.png" 
+                    alt="HP" 
+                    className="h-12 w-auto object-contain shrink-0" 
+                    referrerPolicy="no-referrer" 
+                  />
+                  <img 
+                    src="https://i.postimg.cc/0jqSYQj3/kyocera-Logo.png" 
+                    alt="Kyocera" 
+                    className="h-12 w-auto object-contain shrink-0" 
+                    referrerPolicy="no-referrer" 
+                  />
+                  <img 
+                    src="https://i.postimg.cc/FzQSyRz8/Lexmark-Logo.png" 
+                    alt="Lexmark" 
+                    className="h-12 w-auto object-contain shrink-0" 
+                    referrerPolicy="no-referrer" 
+                  />
+                  <img 
+                    src="https://i.postimg.cc/J0WXNn0S/Pantum-logo.png" 
+                    alt="Pantum" 
+                    className="h-12 w-auto object-contain shrink-0" 
+                    referrerPolicy="no-referrer" 
+                  />
+                  <img 
+                    src="https://i.postimg.cc/KjyTPzj6/Ricoh-logo.png" 
+                    alt="Ricoh" 
+                    className="h-12 w-auto object-contain shrink-0" 
+                    referrerPolicy="no-referrer" 
+                  />
+                  <img 
+                    src="https://i.postimg.cc/mkG9YDhG/Samsung-Logo.png" 
+                    alt="Samsung" 
+                    className="h-12 w-auto object-contain shrink-0" 
+                    referrerPolicy="no-referrer" 
+                  />
                 </div>
               ))}
             </motion.div>
@@ -461,7 +497,7 @@ function HomePage() {
       </section>
 
       {/* Outsourcing Section */}
-      <section id="outsourcing" className="py-16 md:py-24">
+      <section id="outsourcing" className="pt-16 pb-8 md:pt-24 md:pb-10">
         <div className="container mx-auto px-6">
           <div className="mb-12 md:mb-16 text-center">
             <h2 className="mb-4 text-3xl font-bold text-slate-900 md:text-5xl">Outsourcing de Impressão</h2>
@@ -561,7 +597,7 @@ function HomePage() {
             ))}
           </div>
 
-          <div className="mt-16 text-center">
+          <div className="mt-8 md:mt-10 text-center">
             <Link to="/planos" className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-lg font-bold text-white transition-all hover:opacity-90 hover:shadow-lg hover:shadow-primary/30">
               Nossos Planos Outsourcing <ChevronRight size={20} />
             </Link>
@@ -570,7 +606,7 @@ function HomePage() {
       </section>
 
       {/* Suprimentos Section */}
-      <section id="suprimentos" className="bg-white py-16 md:py-24">
+      <section id="suprimentos" className="bg-white pt-6 pb-16 md:pt-10 md:pb-24">
         <div className="container mx-auto px-6">
           <div className="flex flex-col items-center justify-between gap-12 lg:flex-row-reverse">
             <div className="lg:w-1/2">
