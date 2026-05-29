@@ -522,19 +522,19 @@ function HomePage() {
                 title: "Órgãos Públicos",
                 desc: "Soluções robustas para prefeituras e secretarias, garantindo transparência e economia.",
                 icon: <Building2 className="text-primary" size={32} />,
-                image: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=800"
+                image: "https://i.postimg.cc/tCnF63YB/orgaos-publicos.jpg"
               },
               {
                 title: "Hospitais",
                 desc: "Impressão de exames e documentos com alta precisão e disponibilidade 24/7.",
                 icon: <CheckCircle2 className="text-primary" size={32} />,
-                image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=800"
+                image: "https://i.postimg.cc/3J02GXdC/hospitais.jpg"
               },
               {
                 title: "Empresas & Indústria",
                 desc: "Gestão inteligente para escritórios e parques industriais de qualquer porte.",
                 icon: <Printer className="text-primary" size={32} />,
-                image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800"
+                image: "https://i.postimg.cc/QxKc7QHS/empresas.jpg"
               }
             ].map((item, index) => (
               <motion.div 
@@ -666,7 +666,7 @@ function HomePage() {
             
             <div className="relative w-full lg:w-1/2">
               <img 
-                src="https://a6technology.com.br/imagens-fixas/papelaria-a6.jpg" 
+                src="https://i.postimg.cc/ZKv6N8CH/papelaria-a6.jpg" 
                 alt="A6 Technology" 
                 className="w-full rounded-2xl shadow-2xl"
                 referrerPolicy="no-referrer"
