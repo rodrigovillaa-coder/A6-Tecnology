@@ -475,27 +475,27 @@ function HomePage() {
             <div className="mt-10 md:mt-12 flex flex-wrap justify-center gap-6 md:gap-16">
               {[
                 { 
-                  img: "https://a6technology.com.br/images/impressora-icon-1.png", 
+                  img: "https://a6technology.com.br/impressora-icon-1.png", 
                   label: "Impressora monocromática" 
                 },
                 { 
-                  img: "https://a6technology.com.br/images/impressora-icon-2.png", 
+                  img: "https://a6technology.com.br/impressora-icon-2.png", 
                   label: "Impressora colorida" 
                 },
                 { 
-                  img: "https://a6technology.com.br/images/impressora-icon-3.png", 
+                  img: "https://a6technology.com.br/impressora-icon-3.png", 
                   label: "Multifuncional monocromática" 
                 },
                 { 
-                  img: "https://a6technology.com.br/images/impressora-icon-4.png", 
+                  img: "https://a6technology.com.br/impressora-icon-4.png", 
                   label: "Multifuncional colorida" 
                 },
                 { 
-                  img: "https://a6technology.com.br/images/impressora-icon-5.png", 
+                  img: "https://a6technology.com.br/impressora-icon-5.png", 
                   label: "Impressora A3" 
                 },
                 { 
-                  img: "https://a6technology.com.br/images/impressora-icon-6.png", 
+                  img: "https://a6technology.com.br/impressora-icon-6.png", 
                   label: "Impressora A0 térmica" 
                 }
               ].map((cat, idx) => (
