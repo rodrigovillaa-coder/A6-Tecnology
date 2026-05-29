@@ -324,34 +324,45 @@ function SuprimentosPage() {
         </div>
 
         {/* Marcas Parceiras */}
-        <div className="mb-24 rounded-3xl bg-slate-50 py-12 px-6 border border-slate-100 shadow-inner">
+        <div className="relative mb-24 overflow-hidden rounded-3xl bg-slate-50 py-12 border border-slate-100 shadow-inner">
+          {/* Degradê de desvanecimento para efeito visual suave */}
+          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-slate-50 to-transparent"></div>
+          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-slate-50 to-transparent"></div>
+          
           <h3 className="mb-8 text-center text-sm font-bold uppercase tracking-widest text-slate-400">Marcas Parceiras</h3>
-          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-14">
-            {[
-              { src: "https://i.postimg.cc/Y9FgLg2t/Brother-logo.png", alt: "Brother" },
-              { src: "https://i.postimg.cc/cH3YtY1Z/HP-logo.png", alt: "HP" },
-              { src: "https://i.postimg.cc/0jqSYQj3/kyocera-Logo.png", alt: "Kyocera" },
-              { src: "https://i.postimg.cc/FzQSyRz8/Lexmark-Logo.png", alt: "Lexmark" },
-              { src: "https://i.postimg.cc/J0WXNn0S/Pantum-logo.png", alt: "Pantum" },
-              { src: "https://i.postimg.cc/KjyTPzj6/Ricoh-logo.png", alt: "Ricoh" },
-              { src: "https://i.postimg.cc/mkG9YDhG/Samsung-Logo.png", alt: "Samsung" }
-            ].map((brand, idx) => (
-              <motion.div
-                key={idx}
-                className="flex h-12 w-32 md:w-36 items-center justify-center"
-                whileHover={{ scale: 1.08 }}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: idx * 0.05 }}
-              >
-                <img
-                  src={brand.src}
-                  alt={brand.alt}
-                  className="max-h-12 max-w-full object-contain"
-                  referrerPolicy="no-referrer"
-                />
-              </motion.div>
-            ))}
+          
+          <div className="flex w-full overflow-hidden">
+            <motion.div
+              className="flex whitespace-nowrap items-center"
+              animate={{ x: ["0%", "-50%"] }}
+              transition={{ ease: "linear", duration: 25, repeat: Infinity }}
+            >
+              {[...Array(2)].map((_, containerIdx) => (
+                <div key={containerIdx} className="flex gap-16 md:gap-24 items-center shrink-0 pr-16 md:pr-24">
+                  {[
+                    { src: "https://i.postimg.cc/Y9FgLg2t/Brother-logo.png", alt: "Brother" },
+                    { src: "https://i.postimg.cc/cH3YtY1Z/HP-logo.png", alt: "HP" },
+                    { src: "https://i.postimg.cc/0jqSYQj3/kyocera-Logo.png", alt: "Kyocera" },
+                    { src: "https://i.postimg.cc/FzQSyRz8/Lexmark-Logo.png", alt: "Lexmark" },
+                    { src: "https://i.postimg.cc/J0WXNn0S/Pantum-logo.png", alt: "Pantum" },
+                    { src: "https://i.postimg.cc/KjyTPzj6/Ricoh-logo.png", alt: "Ricoh" },
+                    { src: "https://i.postimg.cc/mkG9YDhG/Samsung-Logo.png", alt: "Samsung" }
+                  ].map((brand, idx) => (
+                    <div
+                      key={idx}
+                      className="flex h-12 w-32 md:w-36 items-center justify-center shrink-0"
+                    >
+                      <img
+                        src={brand.src}
+                        alt={brand.alt}
+                        className="max-h-12 max-w-full object-contain"
+                        referrerPolicy="no-referrer"
+                      />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </motion.div>
           </div>
         </div>
 
