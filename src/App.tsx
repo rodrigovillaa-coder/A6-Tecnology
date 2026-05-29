@@ -504,7 +504,7 @@ function HomePage() {
                     <img 
                       src={cat.img} 
                       alt={cat.label} 
-                      className="h-full w-full object-contain opacity-60 transition-opacity group-hover:opacity-100" 
+                      className="h-full w-full object-contain transition-all duration-300 group-hover:grayscale" 
                       referrerPolicy="no-referrer"
                     />
                   </div>
