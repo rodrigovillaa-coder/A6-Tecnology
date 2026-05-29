@@ -751,7 +751,7 @@ function HomePage() {
           <div className="grid gap-8 md:gap-12 md:grid-cols-2">
             <div className="group relative overflow-hidden rounded-3xl">
               <img 
-                src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1200" 
+                src="https://postimg.cc/z30vLwyw" 
                 alt="Sede Própria A6 Tecnology" 
                 className="h-[300px] md:h-[400px] w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 referrerPolicy="no-referrer"
