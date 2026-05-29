@@ -289,15 +289,6 @@ function PlansPage() {
 function SuprimentosPage() {
   const WHATSAPP_LINK = "https://wa.me/551141633085";
 
-  const products = [
-    { name: "Toner Compatível PANTUM PD-219", description: "Alto rendimento, ótimo custo-benefício e durabilidade garantida.", icon: <Package className="h-24 w-24 text-primary opacity-80" /> },
-    { name: "Toner Original HP 85A", description: "Qualidade profissional e confiabilidade HP para suas impressões.", icon: <Package className="h-24 w-24 text-secondary opacity-80" /> },
-    { name: "Toner Brother TN-1060", description: "Excelente custo-benefício, ideal para o dia a dia do seu escritório.", icon: <Package className="h-24 w-24 text-blue-500 opacity-80" /> },
-    { name: "Toner Lexmark 504H", description: "Capacidade para volumes maiores com altíssima durabilidade.", icon: <Package className="h-24 w-24 text-green-600 opacity-80" /> },
-    { name: "Toner Kyocera TK-1175", description: "Rendimento superior para escritórios de grande porte e empresas.", icon: <Package className="h-24 w-24 text-red-600 opacity-80" /> },
-    { name: "Toner Samsung D111S", description: "Impressões nítidas, duradouras e alta economia de suprimentos.", icon: <Package className="h-24 w-24 text-indigo-600 opacity-80" /> },
-  ];
-
   return (
     <div className="pt-24 pb-20">
       <div className="container mx-auto px-6">
@@ -366,33 +357,27 @@ function SuprimentosPage() {
           </div>
         </div>
 
-        {/* Listagem de Produtos */}
-        <h2 className="mb-10 text-center text-3xl font-bold text-slate-900">Suprimentos em Destaque</h2>
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {products.map((product, idx) => (
-            <motion.div 
-              key={idx}
-              whileHover={{ y: -8 }}
-              className="flex flex-col overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-xl shadow-slate-200/50"
+        {/* Botão de Solicitar Orçamento (Laranja / bg-primary) */}
+        <div className="mt-16 text-center">
+          <p className="mb-6 text-lg md:text-xl text-neutral-gray max-w-lg mx-auto">
+            Procura suprimentos específicos para seus equipamentos? Fale conosco e faça sua cotação!
+          </p>
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="inline-block"
+          >
+            <a
+              href={WHATSAPP_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 rounded-full bg-primary px-10 py-5 text-lg font-bold text-white transition-all hover:opacity-90 shadow-xl shadow-primary/30"
+              id="solicitar-orcamento-btn"
             >
-              <div className="flex h-56 w-full items-center justify-center bg-slate-50/80 p-6 border-b border-slate-100">
-                {product.icon}
-              </div>
-              <div className="flex flex-1 flex-col p-6 md:p-8">
-                <h3 className="mb-3 text-lg md:text-xl font-bold leading-tight text-slate-900">{product.name}</h3>
-                <p className="mb-8 text-sm md:text-base text-neutral-gray">{product.description}</p>
-                <a 
-                  href={WHATSAPP_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-auto flex w-full items-center justify-center gap-2 rounded-xl bg-primary py-4 font-bold text-white transition-all hover:bg-slate-900 hover:shadow-lg hover:shadow-slate-900/20"
-                >
-                  <ShoppingCart size={18} />
-                  Comprar
-                </a>
-              </div>
-            </motion.div>
-          ))}
+              Solicitar Orçamento
+              <ChevronRight size={22} className="animate-pulse" />
+            </a>
+          </motion.div>
         </div>
       </div>
     </div>
