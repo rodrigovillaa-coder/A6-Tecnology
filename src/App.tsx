@@ -666,8 +666,8 @@ function HomePage() {
             
             <div className="relative w-full lg:w-1/2">
               <img 
-                src="https://a6technology.com.br/assets/papelaria-a6.jpg" 
-                alt="Papelaria Corporativa A6" 
+                src="/papelaria-a6.jpg" 
+                alt="papelaria a6" 
                 className="w-full rounded-2xl shadow-2xl"
                 referrerPolicy="no-referrer"
               />
