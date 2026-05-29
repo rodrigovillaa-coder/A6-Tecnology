@@ -786,8 +786,8 @@ function HomePage() {
           <div className="mt-12 flex flex-col items-center gap-8 md:gap-12 rounded-3xl bg-slate-100 p-6 md:p-12 lg:flex-row shadow-sm border border-slate-200">
             <div className="w-full lg:w-1/2">
               <img 
-                src="https://lh3.googleusercontent.com/d/1fPLCDyxAOTtgq82cNPyVWeCa20AeHQ5Z" 
-                alt="Equipe A6" 
+                src="/a6-tecnicos.jpg" 
+                alt="A6 Technology" 
                 className="w-full rounded-2xl shadow-xl"
                 referrerPolicy="no-referrer"
               />
