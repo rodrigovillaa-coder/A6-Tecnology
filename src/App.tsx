@@ -846,7 +846,7 @@ function HomePage() {
                       "112eXVvP2ApYP6NMCjm7VVFQXjpi1YCuT",
                       "15cG1l6FDuktGDcoA6gJVabUq49W46SOs"
                     ].map((id, i) => (
-                      <div key={i} className="flex h-20 w-32 md:h-28 md:w-52 items-center justify-center grayscale transition-all hover:grayscale-0 opacity-80 hover:opacity-100">
+                      <div key={i} className="flex h-20 w-32 md:h-28 md:w-52 items-center justify-center transition-all duration-300">
                         <img 
                           src={`https://lh3.googleusercontent.com/d/${id}`} 
                           alt={`Cliente ${i + 1}`} 
