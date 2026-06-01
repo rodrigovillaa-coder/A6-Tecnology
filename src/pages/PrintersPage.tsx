@@ -2,12 +2,24 @@
 import { motion } from "motion/react";
 import { PRINTERS } from "../data/printers";
 import { Link } from "react-router-dom";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, Phone } from "lucide-react";
 
 export default function PrintersPage() {
+  const WHATSAPP_LINK = "https://wa.me/551141633085?text=Olá! Gostaria de solicitar um orçamento para impressoras.";
+
   return (
     <section className="py-24 bg-white min-h-screen pt-32">
       <div className="container mx-auto px-6">
+        {/* Banner Topo */}
+        <div className="w-full mb-12 overflow-hidden rounded-3xl shadow-lg border border-slate-100">
+          <img 
+            src="https://i.postimg.cc/nr6MnpbD/CM2100ADW-03.jpg" 
+            alt="Banner Venda de Impressoras" 
+            className="w-full h-auto max-h-[500px] object-cover object-center"
+            referrerPolicy="no-referrer"
+          />
+        </div>
+
         <div className="mb-16 text-center">
           <h1 className="mb-4 text-4xl font-bold text-slate-900 md:text-5xl uppercase">Nossas Impressoras</h1>
           <div className="mx-auto h-1.5 w-24 rounded-full bg-[#f39221]"></div>
@@ -46,6 +58,18 @@ export default function PrintersPage() {
               </div>
             </motion.div>
           ))}
+        </div>
+
+        {/* Botão de Orçamento no final */}
+        <div className="mt-16 flex justify-center">
+          <a 
+            href={WHATSAPP_LINK} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-3 rounded-xl bg-[#25D366] px-8 py-4 font-bold text-white transition-all hover:opacity-90 shadow-lg shadow-green-200 text-lg"
+          >
+            <Phone size={20} /> Solicitar Orçamento
+          </a>
         </div>
       </div>
     </section>

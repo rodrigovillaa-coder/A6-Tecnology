@@ -35,7 +35,7 @@ const NAV_LINKS = [
   { name: "Outsourcing", href: "/#outsourcing" },
   { name: "Papelaria", href: "/#papelaria" },
   { name: "Suprimentos", href: "/#suprimentos" },
-  { name: "Impressoras", href: "/#venda-impressoras" },
+  { name: "Impressoras", href: "/venda-impressoras" },
   { name: "Sobre Nós", href: "/#sobre" },
   { name: "Contato", href: "/#contato" },
 ];
@@ -74,13 +74,13 @@ function Header({ scrolled, isMenuOpen, setIsMenuOpen }: { scrolled: boolean, is
         {/* Desktop Nav */}
         <nav className="hidden md:flex md:items-center md:gap-8">
           {NAV_LINKS.map((link) => (
-            <a 
+            <Link 
               key={link.name} 
-              href={link.href}
+              to={link.href}
               className="text-sm font-semibold transition-colors text-neutral-gray hover:text-primary"
             >
               {link.name}
-            </a>
+            </Link>
           ))}
           <a 
             href="https://wa.me/551141633085" 
@@ -121,14 +121,14 @@ function Header({ scrolled, isMenuOpen, setIsMenuOpen }: { scrolled: boolean, is
               />
             </div>
             {NAV_LINKS.map((link) => (
-              <a 
+              <Link 
                 key={link.name} 
-                href={link.href}
+                to={link.href}
                 className="text-lg font-medium text-neutral-gray hover:text-primary transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
             <a 
               href="https://wa.me/551141633085" 
@@ -160,9 +160,9 @@ function Footer() {
           </Link>
           <div className="flex flex-wrap justify-center gap-4 md:gap-8">
             {NAV_LINKS.map((link) => (
-              <a key={link.name} href={link.href} className="text-sm text-white/80 hover:text-white">
+              <Link key={link.name} to={link.href} className="text-sm text-white/80 hover:text-white">
                 {link.name}
-              </a>
+              </Link>
             ))}
           </div>
         </div>
@@ -773,13 +773,13 @@ function HomePage() {
           <div className="grid gap-8 md:gap-12 md:grid-cols-2">
             <div className="group relative overflow-hidden rounded-3xl">
               <img 
-                src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1200" 
+                src="https://i.postimg.cc/fbrNG5hb/Estrutura.jpg" 
                 alt="Sede Própria A6 Tecnology" 
                 className="h-[300px] md:h-[400px] w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 to-transparent p-6 md:p-10 flex flex-col justify-end">
-                <div className="flex items-center gap-2 md:gap-3 text-secondary mb-2">
+                <div className="flex items-center gap-2 md:gap-3 text-primary mb-2">
                   <Building2 size={20} />
                   <span className="font-bold tracking-widest uppercase text-[10px] md:text-sm">Sede Própria</span>
                 </div>
@@ -796,7 +796,7 @@ function HomePage() {
                 referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 to-transparent p-6 md:p-10 flex flex-col justify-end">
-                <div className="flex items-center gap-2 md:gap-3 text-secondary mb-2">
+                <div className="flex items-center gap-2 md:gap-3 text-primary mb-2">
                   <Truck size={20} />
                   <span className="font-bold tracking-widest uppercase text-[10px] md:text-sm">Logística Ágil</span>
                 </div>
