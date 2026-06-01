@@ -182,6 +182,8 @@ function Footer() {
 }
 
 function PlansPage() {
+  const WHATSAPP_LINK = "https://wa.me/551141633085";
+
   return (
     <div className="pt-24 pb-20">
       <div className="container mx-auto px-6">
@@ -230,9 +232,14 @@ function PlansPage() {
               </li>
             </ul>
             
-            <button className="mt-auto rounded-xl bg-slate-900 py-4 font-bold text-white transition-all hover:bg-neutral-gray text-center">
+            <a 
+              href={WHATSAPP_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-auto rounded-xl bg-slate-900 py-4 font-bold text-white transition-all hover:bg-neutral-gray text-center"
+            >
               Solicitar Proposta
-            </button>
+            </a>
           </motion.div>
 
           {/* Plan 2 */}
@@ -267,9 +274,14 @@ function PlansPage() {
               </li>
             </ul>
             
-            <button className="mt-auto rounded-xl bg-primary py-4 font-bold text-white transition-all hover:opacity-90 text-center">
+            <a 
+              href={WHATSAPP_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-auto rounded-xl bg-primary py-4 font-bold text-white transition-all hover:opacity-90 text-center"
+            >
               Solicitar Proposta
-            </button>
+            </a>
           </motion.div>
         </div>
 
@@ -429,7 +441,12 @@ function HomePage() {
                   <Link to="/planos" className="flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-lg font-bold text-white transition-all hover:opacity-90 hover:shadow-lg hover:shadow-primary/30">
                     Conheça Nossos Planos <ChevronRight size={20} />
                   </Link>
-                  <a href="#contato" className="flex items-center justify-center gap-2 rounded-full border border-white/30 bg-white/10 px-8 py-4 text-lg font-bold text-white backdrop-blur-sm transition-all hover:bg-white/20">
+                  <a 
+                    href="https://wa.me/551141633085" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 rounded-full border border-white/30 bg-white/10 px-8 py-4 text-lg font-bold text-white backdrop-blur-sm transition-all hover:bg-white/20"
+                  >
                     Falar com Consultor
                   </a>
                 </div>
@@ -447,7 +464,7 @@ function HomePage() {
               { icon: <Truck className="w-8 h-8 md:w-10 md:h-10" />, title: "Frota Própria", desc: "Logística exclusiva para entregas rápidas." },
               { icon: <Building2 className="w-8 h-8 md:w-10 md:h-10" />, title: "Sede Própria", desc: "Estrutura sólida e barracão para estoque." },
               { icon: <Users className="w-8 h-8 md:w-10 md:h-10" />, title: "Técnicos Certificados", desc: "Profissionais treinados e certificados." },
-              { icon: <Award className="w-8 h-8 md:w-10 md:h-10" />, title: "Revenda Autorizada", desc: "Parceria oficial com marcas como PANTUM." },
+              { icon: <Award className="w-8 h-8 md:w-10 md:h-10" />, title: "Revenda Pantum", desc: "Parceria oficial e revenda autorizada." },
             ].map((item, i) => (
               <div key={i} className="text-center">
                 <div className="mb-4 flex justify-center text-primary">
@@ -473,7 +490,7 @@ function HomePage() {
             </p>
 
             {/* Printer Categories Icons */}
-            <div className="mt-10 md:mt-12 flex flex-wrap justify-center gap-6 md:gap-16">
+            <div className="mt-10 md:mt-12 flex flex-nowrap justify-center gap-1.5 sm:gap-3 md:gap-5 overflow-x-auto md:overflow-x-visible pb-4 md:pb-0">
               {[
                 { 
                   img: "https://i.postimg.cc/jSHcWp5K/impressora-icon-1.png", 
@@ -497,19 +514,24 @@ function HomePage() {
                 },
                 { 
                   img: "https://i.postimg.cc/3xX1ysRN/impressora-icon-6.png", 
-                  label: "Impressora A0 térmica" 
+                  label: "Impressora térmica" 
+                },
+                { 
+                  img: "https://i.postimg.cc/J0JfXqX5/impressora-icon-7.png", 
+                  label: "Plotter A0",
+                  scale: "scale-[1.4]" 
                 }
               ].map((cat, idx) => (
-                <div key={idx} className="group flex flex-col items-center gap-3">
-                  <div className="flex h-14 w-14 md:h-20 md:w-20 items-center justify-center transition-transform group-hover:scale-110">
+                <div key={idx} className="group flex flex-col items-center gap-3 flex-shrink-0">
+                  <div className="flex h-12 w-12 sm:h-14 sm:w-14 md:h-18 md:w-18 items-center justify-center transition-transform group-hover:scale-110">
                     <img 
                       src={cat.img} 
                       alt={cat.label} 
-                      className="h-full w-full object-contain transition-all duration-300 group-hover:grayscale" 
+                      className={`h-full w-full object-contain transition-all duration-300 group-hover:grayscale ${cat.scale || ""}`} 
                       referrerPolicy="no-referrer"
                     />
                   </div>
-                  <span className="max-w-[100px] md:max-w-[140px] text-center text-[10px] md:text-sm font-medium text-neutral-gray transition-colors group-hover:text-primary leading-tight">
+                  <span className="max-w-[75px] sm:max-w-[90px] md:max-w-[120px] text-center text-[9px] sm:text-[11px] md:text-sm font-medium text-neutral-gray transition-colors group-hover:text-primary leading-tight">
                     {cat.label}
                   </span>
                 </div>
@@ -682,7 +704,7 @@ function HomePage() {
       </section>
 
       {/* Venda de Impressoras Section */}
-      <section id="venda-impressoras" className="bg-white py-16 md:py-24">
+      <section id="venda-impressoras" className="bg-white pt-16 pb-8 md:pt-24 md:pb-12">
         <div className="container mx-auto px-6">
           <div className="mb-12 md:mb-16 text-center">
             <h2 className="mb-4 text-3xl font-bold text-slate-900 md:text-5xl uppercase">Venda de Impressoras</h2>
@@ -738,7 +760,7 @@ function HomePage() {
       </section>
 
       {/* Infrastructure Section */}
-      <section id="sobre" className="py-16 md:py-24">
+      <section id="sobre" className="pt-8 pb-16 md:pt-12 md:pb-24">
         <div className="container mx-auto px-6">
           <div className="mb-12 md:mb-16 text-center">
             <h2 className="mb-4 text-3xl font-bold text-slate-900 md:text-5xl">Nossa Estrutura</h2>
@@ -888,12 +910,24 @@ function HomePage() {
                   </div>
                   <div className="flex items-start gap-4">
                     <MapPin className="mt-1 shrink-0" size={20} />
-                    <div>
-                      <p className="font-bold">Endereço</p>
-                      <p className="opacity-80">
-                        Av. Anápolis 100, Beathaville 1, Barueri/SP<br />
-                        CEP: 06404-250 - Sala 415 - 4° Andar
-                      </p>
+                    <div className="space-y-4">
+                      <p className="font-bold">Endereços</p>
+                      
+                      <div className="space-y-1">
+                        <p className="font-semibold text-sm text-white/95">BARUERI - SP</p>
+                        <p className="text-sm opacity-85 leading-relaxed">
+                          Av. Anápolis 100, Beathaville 1, Barueri/SP<br />
+                          CEP: 06404-250 - Sala 415 - 4° Andar
+                        </p>
+                      </div>
+
+                      <div className="space-y-1">
+                        <p className="font-semibold text-sm text-white/95">CURITIBA - PR</p>
+                        <p className="text-sm opacity-85 leading-relaxed">
+                          Rua Eduardo Sprada, 4390. Cidade Industrial - Curitiba/PR - Sala 502 - 5° Andar<br />
+                          CEP: 81.270-010
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -906,9 +940,6 @@ function HomePage() {
                     </div>
                     <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition-colors hover:bg-white/20">
                       <span className="font-bold">Ig</span>
-                    </div>
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition-colors hover:bg-white/20">
-                      <span className="font-bold">Fb</span>
                     </div>
                   </div>
                 </div>
