@@ -22,7 +22,9 @@ import {
   Award,
   ArrowLeft,
   Check,
-  ShoppingCart
+  ShoppingCart,
+  Instagram,
+  Linkedin
 } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from "react-router-dom";
@@ -485,8 +487,7 @@ function HomePage() {
             <h2 className="mb-4 text-3xl font-bold text-slate-900 md:text-5xl">Outsourcing de Impressão</h2>
             <div className="mx-auto h-1.5 w-24 rounded-full bg-primary"></div>
             <p className="mx-auto mt-6 max-w-2xl text-base md:text-lg text-neutral-gray">
-              Reduza custos em até 40% com nossa gestão completa de ativos de impressão. 
-              Aluguel de equipamentos modernos e suporte técnico imediato.
+              Impressão de exames e documentos com alta precisão e disponibilidade.
             </p>
 
             {/* Printer Categories Icons */}
@@ -494,19 +495,19 @@ function HomePage() {
               {[
                 { 
                   img: "https://i.postimg.cc/jSHcWp5K/impressora-icon-1.png", 
-                  label: "Impressora monocromática" 
+                  label: "Impressora Monocromática" 
                 },
                 { 
                   img: "https://i.postimg.cc/pLfC9wTb/impressora-icon-2.png", 
-                  label: "Impressora colorida" 
+                  label: "Impressora Colorida" 
                 },
                 { 
                   img: "https://i.postimg.cc/BnTp8r6q/impressora-icon-3.png", 
-                  label: "Multifuncional monocromática" 
+                  label: "Multifuncional Monocromática" 
                 },
                 { 
                   img: "https://i.postimg.cc/6prc7kQF/impressora-icon-4.png", 
-                  label: "Multifuncional colorida" 
+                  label: "Multifuncional Colorida" 
                 },
                 { 
                   img: "https://i.postimg.cc/8zR4F25s/impressora-icon-5.png", 
@@ -514,7 +515,7 @@ function HomePage() {
                 },
                 { 
                   img: "https://i.postimg.cc/3xX1ysRN/impressora-icon-6.png", 
-                  label: "Impressora térmica" 
+                  label: "Impressora Térmica" 
                 },
                 { 
                   img: "https://i.postimg.cc/J0JfXqX5/impressora-icon-7.png", 
@@ -905,7 +906,7 @@ function HomePage() {
                     <Mail className="mt-1 shrink-0" size={20} />
                     <div>
                       <p className="font-bold">E-mail</p>
-                      <p className="opacity-80">contato@a6tecnology.com.br</p>
+                      <p className="opacity-80">contato@a6technology.com.br</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
@@ -916,7 +917,7 @@ function HomePage() {
                       <div className="space-y-1">
                         <p className="font-semibold text-sm text-white/95">BARUERI - SP</p>
                         <p className="text-sm opacity-85 leading-relaxed">
-                          Av. Anápolis 100, Beathaville 1, Barueri/SP<br />
+                          Av. Anápolis, 100, Bethaville 1, Barueri/SP<br />
                           CEP: 06404-250 - Sala 415 - 4° Andar
                         </p>
                       </div>
@@ -935,12 +936,15 @@ function HomePage() {
                 <div className="mt-12">
                   <p className="mb-4 font-bold">Siga-nos</p>
                   <div className="flex gap-4">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition-colors hover:bg-white/20">
-                      <span className="font-bold">In</span>
-                    </div>
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition-colors hover:bg-white/20">
-                      <span className="font-bold">Ig</span>
-                    </div>
+                    <a 
+                      href="https://www.instagram.com/a6tecnology/" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition-colors hover:bg-white/20"
+                      title="Instagram"
+                    >
+                      <Instagram size={20} />
+                    </a>
                   </div>
                 </div>
               </div>
